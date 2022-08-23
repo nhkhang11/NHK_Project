@@ -15,5 +15,6 @@ struct SCP {
 
 void addAddendum(SCP &obj, string addendum) {
     // Student answer
+    
 }
 /// END  <STUDENT ANSWER>

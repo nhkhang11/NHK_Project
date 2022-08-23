@@ -10,10 +10,11 @@ using namespace std;
 
 void runTest(int n)
 {
-    long result;
+    long result = 1;
     // TODO: Call function calculateFactorial in here and assign value to the variable result
-
-
+    for (int i = 1; i <= n; i++){
+        result *= i;
+    }
     cout << result << endl;
 }
 /// END  <STUDENT ANSWER>

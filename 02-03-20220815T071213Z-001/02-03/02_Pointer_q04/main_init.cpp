@@ -18,7 +18,7 @@ int main()
             cin >> matrix[i][j];
         }
     }
-    deleteMatrix(matrix, r);
+    deleteMatrix( matrix, r);
     // check if matrix is deallocated
     /// END  <TEST CODE>
 
