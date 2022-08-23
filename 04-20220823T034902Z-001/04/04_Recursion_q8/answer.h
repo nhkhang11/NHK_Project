@@ -9,7 +9,6 @@ int cP(int n, int* p, int  s)
 {
 	return 0;
 }
-
 int a2B(int n, int st, int a, int b)
 {
 	if (n == 0)		return 0;
