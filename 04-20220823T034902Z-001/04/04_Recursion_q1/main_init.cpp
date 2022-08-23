@@ -11,8 +11,8 @@ int main() {
     //cin>>n;
     //int *ar = new int[n];
     //for(int i=0;i<n;i++) cin>>ar[i];
-	ar[5]={1, 2, 3, 4, 5};
-    cout<<checkDuplicate(ar, n);
+	int arr[5]={1, 2, 3, 4, 5};
+    cout<<checkDuplicate(arr, n);
     return 0;
 
     /// END  <TEST CODE>

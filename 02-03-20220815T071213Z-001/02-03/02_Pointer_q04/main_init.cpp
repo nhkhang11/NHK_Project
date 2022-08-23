@@ -21,6 +21,5 @@ int main()
     deleteMatrix( matrix, r);
     // check if matrix is deallocated
     /// END  <TEST CODE>
-
     return 0;
 }
