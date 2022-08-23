@@ -6,10 +6,10 @@ using namespace std;
 /// BEGIN  <STUDENT ANSWER>
 int** transposeMatrix(int** matrix, int r, int c) {
     // TODO:
-    int **newArr = new int*[c];
-    for(int i=0;i<r;i++)
+    int **newArr = new int*[r];
+    for(int i=0;i<c;i++)
     {
-        newArr[i]=new int[r];
+        newArr[i]=new int[c];
     }
 
     for (int i = 0; i < c; i++)
