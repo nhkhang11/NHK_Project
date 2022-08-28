@@ -12,7 +12,7 @@ int main() {
     //int *ar = new int[n];
     //for(int i=0;i<n;i++) cin>>ar[i];
 	int arr[5]={1, 2, 3, 4, 5};
-    cout<<checkDuplicate(arr, n);
+    cout<<checkDuplicate(arr, n)<< endl;
     return 0;
 
     /// END  <TEST CODE>
