@@ -10,7 +10,7 @@ int main()
 
     // BEGIN  <TEST CODE>
     
-    ClockType myClock;
+    ClockType myClock(00,0,0);
     myClock.printTime();
 
     /// END  <TEST CODE>

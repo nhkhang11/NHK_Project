@@ -9,7 +9,11 @@ class ClockType
 public:
     ClockType();
       
-    void setTime(int, int, int);
+    void setTime(int hour, int minute, int second){
+      this->hr = hour;
+      this->min = minute;
+      this->sec = second;
+    };
     void printTime() const;
 
 private:

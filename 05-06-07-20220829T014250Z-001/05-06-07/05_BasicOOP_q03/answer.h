@@ -7,7 +7,11 @@ using namespace std;
 class ClockType
 {
    public:
-      ClockType(int, int, int); //constructor with parameters
+      ClockType(int hr, int min, int sec){ //constructor with parameters
+        this->hr = hr;
+        this->min = min;
+        this->sec = sec;
+      }
       ClockType(); //default constructor
       
       void printTime() const;

@@ -7,12 +7,12 @@ using namespace std;
 class ClockType
 {
 public:
-    ClockType(int, int, int);
+    ClockType(int hour, int minute, int second);
     ClockType();    
     void printTime() const;
-    void setTime(int, int, int);
+    void setTime(int hour, int minute, int second);
     
-    void getTime(int&, int&, int&) const;
+    void getTime(int& hours, int& minutes, int& seconds) const;
     
 
 private:
@@ -48,6 +48,11 @@ void ClockType::setTime(int hours, int minutes, int seconds)
     else
         sec = 0;
 }
+void ClockType::getTime(int &hours, int &minutes, int &seconds) const{
+        hours = this->hr;
+        minutes = this->min;
+        seconds = this->sec;
+};
 
 void ClockType::printTime() const
 {
