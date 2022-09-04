@@ -24,6 +24,7 @@ public:
     template <typename InputIterator>
     static LLNode* createWithIterators(InputIterator first, InputIterator last);
     static void printList(LLNode* head);
+    static int convertNodeData(LLNode* head);
     void clear();
 };
 
@@ -72,8 +73,42 @@ void LLNode::clear() {
 
 
 /// BEGIN  <STUDENT ANSWER>
+int LLNode::convertNodeData(LLNode *head)
+{
+    LLNode *trav = head;
+    int result = 0;
+    int multi = 1;
+    while (trav != nullptr)
+    {
+        result = result + (trav->val * multi);
+        multi = multi * 10;
+        trav = trav->next;
+    }
+    return result;
+}
 LLNode* addLinkedList(LLNode* l0, LLNode* l1) {
     // STUDENT ANSWER
-    
+     int result;
+    int temp;
+    int count = 0;
+    int pos = 0;
+    result = LLNode::convertNodeData(l0) + LLNode::convertNodeData(l1);
+    temp = result;
+    while (temp > 0)
+    {
+        temp = temp / 10;
+        count++;
+    }
+    int arr[count];
+    while (result > 0)
+    {
+        int lastnum;
+        lastnum = result % 10;
+        result = result / 10;
+        arr[pos] = lastnum;
+        pos++;
+    }
+    LLNode *l2 = LLNode::createWithIterators(arr, arr + sizeof(arr) / sizeof(int));
+    return l2;
 }
 /// END  <STUDENT ANSWER>

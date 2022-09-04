@@ -188,6 +188,49 @@ T SLinkedList<T>::removeAt(int index)
 {
     /* Remove element at index and return removed value */
     //TODO
+     int cursor = 0;
+    // Node *temp1 = this->head;
+    //  remove head
+    if (index == 0)
+    {
+        Node *temp = this->head;
+        int result = temp->data;
+        this->head = this->head->next;
+        delete temp;
+        this->count = this->count - 1;
+        return result;
+    }
+    // remove tail
+    if (index == count - 1)
+    {
+        Node *temp = this->head;
+        for (int i = 0; i < count - 2; i++)
+        {
+            temp = temp->next;
+        }
+        int result = this->tail->data;
+        this->tail = temp;
+        temp->next = NULL;
+        this->count = this->count - 1;
+        return result;
+    }
+    else
+    {
+        Node *temp = this->head;
+        Node *p;
+        while (temp != NULL)
+        {
+            if (cursor == index - 1)
+            {
+                p = temp->next;
+                temp->next = p->next;
+                int result = p->data;
+                return result;
+            }
+            temp = temp->next;
+            cursor++;
+        }
+    }
 }
 
 template <class T>
@@ -195,12 +238,22 @@ bool SLinkedList<T>::removeItem(const T& item)
 {
     /* Remove the first apperance of item in list and return true, otherwise return false */
     //TODO
-    
+    if (indexOf(item) != -1)
+    {
+        this->removeAt(indexOf(item));
+        return true;
+    }
+    return false;
 }
 
 template<class T>
 void SLinkedList<T>::clear(){
     /* Remove all elements in list */
     //TODO
+    while (this->count >0)
+    {
+        this->removeAt(0);
+    }
+    
 }
 
